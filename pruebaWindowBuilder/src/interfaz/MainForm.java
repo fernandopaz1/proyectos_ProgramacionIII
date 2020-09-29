@@ -35,15 +35,37 @@ public class MainForm {
 					e.printStackTrace();
 				}
 			}
-		});
+		}); 
 	}
 
 	/**
 	 * Create the application.
 	 */
 	public MainForm() {
+         /*
+          *    //here you can put the selected theme class name in JTattoo
+            	try {
+					UIManager.setLookAndFeel("com.jtattoo.plaf.texture.TextureLookAndFeel");
+				} catch (ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (InstantiationException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IllegalAccessException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (UnsupportedLookAndFeelException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		*/
+		
 		try {
+			//Podemos usar mas looksAndFeel siempre instalando el .jar correspondiente
+			//Esos lookAndFeel deben ser soportados por swing
 			UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+			//UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -57,6 +79,7 @@ public class MainForm {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	
 		initialize();
 	}
 
@@ -74,7 +97,7 @@ public class MainForm {
 		frame.getContentPane().add(lblIntrodNombre);
 		
 		inputNombre = new JTextField();
-		inputNombre.setBounds(268, 12, 114, 19);
+		inputNombre.setBounds(268, 12, 126, 28);
 		frame.getContentPane().add(inputNombre);
 		inputNombre.setColumns(10);
 		
